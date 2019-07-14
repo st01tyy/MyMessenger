@@ -1,5 +1,6 @@
 package main;
 
+import controller.LoginService;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -16,7 +17,7 @@ public class Main extends Application
 		 * 程序启动入口
 		 */
 		
-		
+		LoginService.showLoginPage();
 	}
 	public static void main(String[] args) 
 	{
