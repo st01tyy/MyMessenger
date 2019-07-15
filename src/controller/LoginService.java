@@ -16,6 +16,10 @@ public class LoginService
 	
 	public static void showLoginPage()
 	{
+		/*
+		 * 显示登录页面
+		 */
+		
 		try
 		{
 			//读取FXML文件并初始化控制器
@@ -36,5 +40,13 @@ public class LoginService
 		{
 			e.printStackTrace();
 		}
+	}
+	public static void jumpToRegisterPage()
+	{
+		/*
+		 *由超链接 跳转至注册页面
+		 */
+		
+		RegisterService.showRegisterPage();
 	}
 }

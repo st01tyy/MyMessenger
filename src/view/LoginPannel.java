@@ -4,6 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTextField;
+
+import controller.LoginService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
@@ -42,6 +44,7 @@ public class LoginPannel
     	 */
     	
     	logo.setImage(new Image(this.getClass().getResourceAsStream("/resource/image/logo.jpg")));
+    	link_register.setOnMouseClicked(e -> LoginService.jumpToRegisterPage());
     }
 
 }

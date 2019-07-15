@@ -8,15 +8,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RegisterPannel">
    <children>
       <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
          <children>
-            <ImageView fitHeight="84.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/welcome.jpg" />
-               </image>
+            <ImageView fx:id="image" fitHeight="84.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
@@ -38,7 +34,7 @@
          <children>
             <VBox prefHeight="29.0" prefWidth="550.0">
                <children>
-                  <JFXTextField focusTraversable="false" promptText="在此处输入用户名，长度为6-12个字">
+                  <JFXTextField fx:id="txtfield_name" focusTraversable="false" promptText="在此处输入用户名，长度为6-12个字">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -46,7 +42,7 @@
                         <Insets bottom="5.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <Label text="用户名无效或已存在" textFill="RED">
+                  <Label fx:id="errmsg_name" text="用户名无效或已存在" textFill="RED" visible="false">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -61,7 +57,7 @@
             </VBox>
             <VBox prefHeight="29.0" prefWidth="550.0">
                <children>
-                  <JFXPasswordField focusTraversable="false" promptText="在此处输入密码，必须含有数字和字母，不能有中文，长度为8-20位">
+                  <JFXPasswordField fx:id="txtfield_pw" focusTraversable="false" promptText="在此处输入密码，必须含有数字和字母，不能有中文，长度为8-20位">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -69,7 +65,7 @@
                         <Insets bottom="5.0" />
                      </VBox.margin>
                   </JFXPasswordField>
-                  <Label text="密码无效" textFill="RED">
+                  <Label fx:id="errmsg_pw" text="密码无效" textFill="RED" visible="false">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -84,7 +80,7 @@
             </VBox>
             <VBox prefHeight="29.0" prefWidth="550.0">
                <children>
-                  <JFXPasswordField focusTraversable="false" promptText="在此处再输入一次密码">
+                  <JFXPasswordField fx:id="txtfield_pwconfirm" focusTraversable="false" promptText="在此处再输入一次密码">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -92,7 +88,7 @@
                         <Insets bottom="5.0" />
                      </VBox.margin>
                   </JFXPasswordField>
-                  <Label text="两次输入密码不一致" textFill="RED">
+                  <Label fx:id="errmsg_pwconfirm" text="两次输入密码不一致" textFill="RED" visible="false">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -110,7 +106,7 @@
             <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
          </VBox.margin>
       </VBox>
-      <JFXButton prefHeight="23.0" prefWidth="190.0" style="-fx-background-color: #800080;" text="注册" textFill="WHITE">
+      <JFXButton fx:id="btn_register" prefHeight="23.0" prefWidth="190.0" style="-fx-background-color: #800080;" text="注册" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -118,7 +114,7 @@
             <Insets bottom="5.0" />
          </VBox.margin>
       </JFXButton>
-      <JFXSpinner>
+      <JFXSpinner fx:id="spinner" visible="false">
          <VBox.margin>
             <Insets top="5.0" />
          </VBox.margin>
