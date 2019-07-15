@@ -31,7 +31,7 @@
       </HBox>
       <VBox prefWidth="250.0">
          <children>
-            <JFXTextField fx:id="txtfield_name" prefHeight="23.0" prefWidth="252.0" promptText="用户名">
+            <JFXTextField fx:id="txtfield_name" focusTraversable="false" prefHeight="23.0" prefWidth="252.0" promptText="用户名">
                <VBox.margin>
                   <Insets bottom="15.0" />
                </VBox.margin>
@@ -39,7 +39,7 @@
                   <Font size="14.0" />
                </font>
             </JFXTextField>
-            <JFXPasswordField fx:id="txtfield_pw" promptText="密码">
+            <JFXPasswordField fx:id="txtfield_pw" focusTraversable="false" promptText="密码">
                <VBox.margin>
                   <Insets bottom="15.0" top="15.0" />
                </VBox.margin>
@@ -47,7 +47,7 @@
                   <Font size="14.0" />
                </font>
             </JFXPasswordField>
-            <Hyperlink fx:id="link_register" text="还没有账户吗？点击此处注册">
+            <Hyperlink fx:id="link_register" focusTraversable="false" text="还没有账号？点击此处注册">
                <font>
                   <Font size="14.0" />
                </font>
@@ -60,7 +60,7 @@
             <Insets left="25.0" right="25.0" />
          </VBox.margin>
       </VBox>
-      <JFXButton fx:id="btn_login" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #1141f9;" text="登录" textFill="WHITE">
+      <JFXButton fx:id="btn_login" focusTraversable="false" prefHeight="30.0" prefWidth="169.0" style="-fx-background-color: #1141f9;" text="登录" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
